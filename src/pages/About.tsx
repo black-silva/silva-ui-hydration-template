@@ -2,6 +2,12 @@ import { Card, H1, Text, YStack } from "silva-ui";
 import { Layout } from "../components/Layout";
 
 export function About() {
+  async function loadMessage() {
+    const response = await fetch("/api/message");
+    const { message } = await response.json();
+    window.alert(message);
+  }
+
   return (
     <Layout>
       <YStack gap="large">
@@ -13,9 +19,14 @@ export function About() {
         </YStack>
 
         <Card p="large">
-          <Text as="p">
-            Add pages in src/pages, then define their paths in src/app.tsx.
-          </Text>
+          <YStack gap="medium">
+            <Text as="p">
+              Add pages in src/pages, then define their paths in src/app.tsx.
+            </Text>
+            <button type="button" onClick={loadMessage}>
+              Call the Hono API
+            </button>
+          </YStack>
         </Card>
       </YStack>
     </Layout>
