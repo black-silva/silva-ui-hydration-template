@@ -1,8 +1,10 @@
 import { Card, H1, Text, YStack } from 'silva-ui';
+import { Layout } from '../components/Layout';
 
 export function About() {
   return (
-    <YStack gap="large">
+    <Layout>
+      <YStack gap="large">
       <YStack gap="small">
         <H1>About this starter</H1>
         <Text as="p" color="muted" lineHeight="relaxed">
@@ -16,5 +18,6 @@ export function About() {
         </Text>
       </Card>
     </YStack>
+    </Layout>
   );
 }
