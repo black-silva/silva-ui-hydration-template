@@ -12,13 +12,13 @@ export function Home() {
           </Text>
         </YStack>
 
-        <Card p="large" backgroundColor="ocean">
+        <Card p="large" backgroundColor="midnight">
           <YStack gap="medium">
             <Text color="primaryContrast" fontWeight="bold">Start building</Text>
             <Text color="primaryContrast">
               Edit src/pages/Home.tsx and make this page yours.
             </Text>
-            <Anchor href="/about" color="primaryContrast" fontWeight="bold">
+            <Anchor href="/about" color="black" fontWeight="bold">
               Meet the project
             </Anchor>
           </YStack>

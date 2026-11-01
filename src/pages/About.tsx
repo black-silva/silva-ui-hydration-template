@@ -1,4 +1,4 @@
-import { Card, H1, Text, YStack } from "silva-ui";
+import { Card, H1, Text, YStack, Button } from "silva-ui";
 import { Layout } from "../components/Layout";
 
 export function About() {
@@ -23,9 +23,9 @@ export function About() {
             <Text as="p">
               Add pages in src/pages, then define their paths in src/app.tsx.
             </Text>
-            <button type="button" onClick={loadMessage}>
+            <Button bg="blue6" type="button" onClick={loadMessage}>
               Call the Hono API
-            </button>
+            </Button>
           </YStack>
         </Card>
       </YStack>

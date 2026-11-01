@@ -7,8 +7,8 @@ interface LayoutProps {
 
 export function Layout({ children }: LayoutProps) {
   return (
-    <Theme name="green">
-      <YStack gap="xl" p="medium" bg="background">
+    <Theme name="midnight">
+      <YStack gap="xl" p="medium" bg="background" h="screenH">
         <XStack alignItems="center" justifyContent="space-between" gap="medium" flexWrap="wrap">
           <Box href="/" textDecoration="none" color="secondary">
             <H2 fontSize="xl">silva-ui</H2>
