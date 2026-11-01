@@ -1,8 +1,18 @@
-import { About } from './pages/About';
-import { Home } from './pages/Home';
+import { defineRoutes, Router } from "@w3cj/ruta";
+import { About } from "./pages/About";
+import { Home } from "./pages/Home";
+
+const routes = defineRoutes((route) => [
+  route("/", Home),
+  route("/about", About),
+]);
+
+declare module "@w3cj/ruta" {
+  interface Register {
+    routes: typeof routes;
+  }
+}
 
 export function App() {
-  const page = window.location.pathname === '/about' ? <About /> : <Home />;
-
-  return page;
+  return <Router routes={routes} />;
 }
